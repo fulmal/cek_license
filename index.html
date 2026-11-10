@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informasi Lisensi — Badan Intelijen Negara</title>
+  <meta name="description" content="Informasi detail lisensi 6 modul dan 20 submodul — Cybersphere Solution untuk Badan Intelijen Negara." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="#home" class="brand">
+        <span class="brand-logo" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </span>
+        <span class="brand-name">Informasi Lisensi</span>
+      </a>
+
+      <form id="searchForm" class="search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="searchInput" type="search" placeholder="Cari modul, submodul, atau kode lisensi" autocomplete="off" aria-label="Cari" />
+      </form>
+
+      <nav class="nav">
+        <a href="#home" id="navHome">Modul</a>
+        <a href="#info" id="navInfo">Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <!-- Lightbox -->
+  <dialog id="lightbox" class="lightbox" aria-label="Pratinjau sertifikat">
+    <div class="lightbox-bar">
+      <span id="lightboxTitle" class="lightbox-title"></span>
+      <div class="lightbox-actions">
+        <button type="button" onclick="zoom(-25)" aria-label="Perkecil">−</button>
+        <span id="zoomLevel">100%</span>
+        <button type="button" onclick="zoom(25)" aria-label="Perbesar">+</button>
+        <form method="dialog"><button type="submit" aria-label="Tutup">✕</button></form>
+      </div>
+    </div>
+    <div id="lightboxStage" class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    Cybersphere Solution — Hongkong · Badan Intelijen Negara · Berlaku 1 Mei 2026 – 31 Des 2029
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
